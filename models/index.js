@@ -1,0 +1,1 @@
+//has many relations, etc.so like user.hasMany posts / user.hasMany comments / post.belongsTo user / post.hasMany comments / comments.belongsTo user / comments.belongsTo posts
