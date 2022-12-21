@@ -1,25 +1,25 @@
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    
+<link href="/public/style.css" rel="stylesheet">
+
+
+<!--Header Nav-->
 <header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <div class="nav"><nav class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="/views/homepage.handlebars" class="flex items-center">
-                <img src="/assets/New Project (1).png" class="mr-3 h-10 lg:h-12" alt="blog logo" />
+                <img src="/assets/5375478681594722064-128.png" width="50" height="300" class="mr-3 h-10 lg:h-12" alt="blog logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">MVC Technical Blog</span>
             </a>
             <div class="flex items-center lg:order-2">
                 <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a>
-                <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Get started</a>
-                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                    
-                </button>
             </div>
-            
+
         </div>
     </nav>
+</div>
 </header>
 
-
+<!--Blog Body-->
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
@@ -30,13 +30,20 @@
     </div>
   </section>
 
-<form>
-    <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-        <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-            <label for="comment" class="sr-only">Your comment</label>
-            <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required></textarea>
-        </div>
-        <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
-            <button type="submit" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-                Post comment
-            </button>
+ <!--Comment Form-->
+ 
+ <div id="comment" class="form-group">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <button type="button" class="btn btn-outline-info">Submit</button>
+  </div>
+
+
+<!--Footer-->
+<footer id="footer" class="fixed-bottom bg-light text-center text-dark">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright: MVC Technical Blog.<br>
+      Icon by www.wishforge.games on freeicons.io    </div>
+    <!-- Copyright -->
+  </footer>
