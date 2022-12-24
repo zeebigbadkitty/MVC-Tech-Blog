@@ -7,6 +7,25 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "sequelize": "^6.27.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "mvc-tech-blog",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeebigbadkitty/MVC-Tech-Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeebigbadkitty/MVC-Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/zeebigbadkitty/MVC-Tech-Blog#readme",
+  "description": ""
 }
