@@ -1,57 +1,64 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVC Technical Blog</title></head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVC Technical Blog</title>
 
-<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-<link href="/public/style.css" rel="stylesheet">
-
-
-<!--Header Nav-->
-<header>
-    <div class="nav"><nav class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="/views/homepage.handlebars" class="flex items-center">
-                <img src="/assets/5375478681594722064-128.png" width="50" height="300" class="mr-3 h-10 lg:h-12" alt="blog logo" />
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">MVC Technical Blog</span>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Header Nav-->
+    <header>
+      <div class="nav"><nav
+          class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
+        >
+          <div
+            class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+          >
+            <a href="/views/blog.handlebars" class="flex items-center">
+              <img
+                src="/assets/5375478681594722064-128.png"
+                width="50"
+                height="300"
+                class="mr-3 h-10 lg:h-12"
+                alt="blog logo"
+              />
+              <span
+                class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >MVC Technical Blog</span>
             </a>
             <div class="flex items-center lg:order-2">
-                <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a>
+              <a
+                href="/views/login.handlebars"
+                class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+              >Log in</a>
             </div>
 
-        </div>
-    </nav>
-</div>
-</header>
+          </div>
+        </nav>
+      </div>
+    </header>
+    {{{body}}}
 
-<!--Blog Body-->
-<section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Blog Title</h2>
-            <p class="mb-4 font-light">Blog text.</p>
-            </a>
-        </div>
-    </div>
-  </section>
-
- <!--Comment Form-->
- 
- <div id="comment" class="form-group">
-    <label for="comment">Comment:</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
-    <button type="button" class="btn btn-outline-info">Submit</button>
-  </div>
-
-
-<!--Footer-->
-<footer id="footer" class="fixed-bottom bg-light text-center text-dark">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 Copyright: MVC Technical Blog.<br>
-      Icon by www.wishforge.games on freeicons.io    </div>
-    <!-- Copyright -->
-  </footer>
+    <!--Footer-->
+    <footer id="footer" class="fixed-bottom bg-light text-center text-dark">
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2);"
+      >
+        © 2023 Copyright: MVC Technical Blog.<br />
+        Icon by www.wishforge.games on freeicons.io
+      </div>
+      <!-- Copyright -->
+    </footer>
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
+</html>

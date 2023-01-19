@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'], //May not need?
+          attributes: ['username'], 
         },
       ],
     });
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('main', { 
+    res.render('login', { 
       posts, //...?
       logged_in: req.session.logged_in 
     });
@@ -57,7 +57,7 @@ router.get('/post:id', async (req, res) => {
 router.get('/login', (req, res) => { //tie to login button
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/main');
+    res.redirect('/login');
     return;
   }
 
