@@ -7,20 +7,46 @@
  <div class="logo2"><img src="/assets/5375478681594722064-128.png" alt="logo" width="150" height="150"></div>
 <!-- Sign in form -->
 <div class="tab-content">
-    <form>
+    <form class="login_form">
       <div class="text-center mb-3">
-        <p>Sign in with:</p></div>
+        <p>Login with:</p></div>
 
       <!-- User input -->
         <div class="text-center form-outline mb-4">
         <label class="form-label" for="loginName">Username</label>
-        <input type="text" class="width-150"/>
+        <input id="username_id"type="text" class="width-150"/>
       </div>
 
       <!-- Password input -->
       <div class="text-center form-outline mb-4">
         <label class="form-label">Password</label>
-        <input type="password" class="width-150"/>
+        <input id="password_input"type="password" class="width-150"/>
+      </div>
+
+      
+      <!-- Submit button -->
+      <div class="text-center">
+      <button type="submit" class="btn btn-light btn-block mb-4">Sign in</button>
+      </div>
+</form>
+
+        </div>
+
+        <div class="tab-content">
+    <form class="signup_form">
+      <div class="text-center mb-3">
+        <p>Sign up with:</p></div>
+
+      <!-- New User input -->
+        <div class="text-center form-outline mb-4">
+        <label class="form-label" for="loginName">Username</label>
+        <input id="signup_username"type="text" class="width-150"/>
+      </div>
+
+      <!-- New Password input -->
+      <div class="text-center form-outline mb-4">
+        <label class="form-label">Password</label>
+        <input id="signup_password"type="password" class="width-150"/>
       </div>
 
       
@@ -29,6 +55,7 @@
       <button type="submit" class="btn btn-light btn-block mb-4">Sign in</button>
       </div>
 
-
+</form>
         </div>
-        <script src="./js/login.js"></script>
+
+        <script src="/js/login.js"></script>
